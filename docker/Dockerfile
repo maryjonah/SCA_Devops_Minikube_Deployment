@@ -1,9 +1,11 @@
 FROM python:3.10-slim-bullseye
 
-RUN mkdir /app
-WORKDIR /app
-ADD . /app/
-RUN pip install -r requirements.txt
+WORKDIR /usr/src/app
+COPY . .
 
-EXPOSE 5003
-CMD ["python", "/app/main.py"]
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5000
+ENV FLASK_APP=main.py 
+
+CMD ["flask", "run", "--host=0.0.0.0"]

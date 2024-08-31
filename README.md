@@ -1,3 +1,12 @@
+## Building and Pushing Docker Image to DockerHub Registry
+- After any change to the application, we need to rebuild the image and update the copy in dockerhub registry
+- `docker build -t jonahmary17/python-on-kube:latest`
+- Push updated image: `docker image push jonahmary17/python-on-kube`
+
+## Pull Image to View Content
+- 
+
+
 ## Running the application
 - Clone the repository
 `git clone https://github.com/maryjonah/SCA_Devops_Minikube_Deployment.git`

@@ -6,9 +6,9 @@ spec:
   selector:
     app: python-on-kube
   ports:
-  - protocol: "TCP"
-    port: 6000
-    targetPort: 5003
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
   type: NodePort
 ---
 apiVersion: apps/v1
